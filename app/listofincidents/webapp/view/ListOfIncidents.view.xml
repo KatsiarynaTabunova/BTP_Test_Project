@@ -1,0 +1,36 @@
+<mvc:View controllerName="ns.listofincidents.controller.ListOfIncidents"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <Table 
+        id="idProductsTable"
+        items="{
+			path: '/ListOfIncidents'
+		}"        
+    >
+    <columns>
+			<Column>
+				<Text text="ID" />
+			</Column>
+			<Column>
+				<Text text="Title" />
+			</Column>
+			<Column>
+				<Text text="Customer" />
+			</Column>			
+		</columns>
+        <items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<ObjectIdentifier
+						title="{ID}"/>
+					<Text
+						text="{title}" />
+					<Text
+						text="{= ${customer/firstName} + ' ' + ${customer/lastName} }" />
+				</cells>
+			</ColumnListItem>
+		</items>
+    </Table>
+    </Page>
+</mvc:View>

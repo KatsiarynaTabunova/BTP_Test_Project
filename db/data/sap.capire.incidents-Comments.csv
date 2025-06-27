@@ -1,0 +1,5 @@
+ID,incident_ID,author,createdAt,content
+c1e1e2e3-0001-0001-0001-000000000001,3b23bb4b-4ac7-4a24-ac02-aa10cabd842c,Anna,"2024-06-01T10:00:00Z","Please check the inverter connection."
+c1e1e2e3-0002-0002-0002-000000000002,3a4ede72-244a-4f5f-8efa-b17e032d01ee,Tom,"2024-06-02T15:30:00Z","No current could be due to a fuse issue."
+c1e1e2e3-0003-0003-0003-000000000003,3ccf474c-3881-44b7-99fb-59a2a4668418,Emily,"2024-06-03T08:45:00Z","Strange noise still persists. Please advise."
+c1e1e2e3-0004-0004-0004-000000000004,3583f982-d7df-4aad-ab26-301d4a157cd7,Liam,"2024-06-04T11:20:00Z","Panel needs urgent replacement."
