@@ -1,0 +1,43 @@
+<mvc:View controllerName="ns.itemsfreesyle.controller.ListReport"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <Table 
+        id="idProductsTable"
+        items="{
+			path: '/Items'
+		}"        
+    >
+    <headerToolbar>
+    <Toolbar>
+      <Title text="App Items" level="H2" />
+      <ToolbarSpacer />
+      <Button text="Create Item" press="onOpenCreateDialog" />
+    </Toolbar>
+    </headerToolbar>
+    <columns>
+			<Column>
+				<Text text="Title" />
+			</Column>
+			<Column>
+				<Text text="Description" />
+			</Column>
+			<Column>
+				<Text text="Quantity" />
+			</Column>			
+		</columns>
+        <items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<ObjectIdentifier
+						title="{title}"/>
+					<Text
+						text="{descr}" />
+					<Text
+						text="{quantity}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+    </Table>
+    </Page>
+</mvc:View>

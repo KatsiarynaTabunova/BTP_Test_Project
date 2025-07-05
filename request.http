@@ -1,0 +1,14 @@
+# GET http://localhost:4004/odata/v4/processor/Items
+
+GET http://localhost:4004/odata/v4/processor/getItemsByQuantity(quantity=5)
+
+# POST http://localhost:4004/odata/v4/processor/ProcessorService.createItem
+# content-Type: application/json
+
+# {
+#   "title": "Test Item",
+#   "descr": "Manual test item description",
+#   "quantity": 42
+# }
+
+  

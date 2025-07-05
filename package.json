@@ -16,10 +16,12 @@
   "scripts": {
     "start": "cds-serve",
     "watch-incidents": "cds watch --open incidents/webapp/index.html?sap-ui-xx-viewCache=false",
-    "watch-listofincidents": "cds watch --open listofincidents/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-listofincidents": "cds watch --open listofincidents/webapp/index.html?sap-ui-xx-viewCache=false",   
+    "watch-items_freesyle": "cds watch --open items_freesyle/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "sapux": [
     "app/incidents",
-    "app/listofincidents"
+    "app/listofincidents",    
+    "app/items_freesyle"
   ]
 }

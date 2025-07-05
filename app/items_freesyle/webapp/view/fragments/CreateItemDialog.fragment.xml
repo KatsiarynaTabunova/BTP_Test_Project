@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Dialog 
+    id="createDialog" 
+    title="Create Item">
+    <VBox class="sapUiSmallMargin">
+      <Label text="Title" />
+      <Input id="inputTitle" />
+      <Label text="Description" />
+      <Input id="inputDescr" />
+      <Label text="Quantity" />
+      <Input id="inputQuantity" type="Number" />
+    </VBox>
+    <beginButton>
+      <Button text="Create" press="onCreateItemFromDialog" />
+    </beginButton>
+    <endButton>
+      <Button text="Cancel" press=".onCloseDialog" />
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>
