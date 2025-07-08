@@ -1,6 +1,7 @@
 # GET http://localhost:4004/odata/v4/processor/Items
 
-GET http://localhost:4004/odata/v4/processor/getItemsByQuantity(quantity=5)
+# GET http://localhost:4004/odata/v4/processor/getItemsByQuantity(quantity=5)
+# Authorization: Basic Ym9iOg==
 
 # POST http://localhost:4004/odata/v4/processor/ProcessorService.createItem
 # content-Type: application/json
@@ -11,4 +12,13 @@ GET http://localhost:4004/odata/v4/processor/getItemsByQuantity(quantity=5)
 #   "quantity": 42
 # }
 
-  
+
+###  Get access token
+
+# https://d144bd0btrial.authentication.us10.hana.ondemand.com/oauth/authorize?&response_type=code&client_id=sb-incident-management-app!t478658&redirect_uri=http://localhost:4004/callback
+
+# POST https://d144bd0btrial.authentication.us10.hana.ondemand.com/oauth/token
+# Content-Type: application/x-www-form-urlencoded
+# Authorization: Basic c2ItaW5jaWRlbnQtbWFuYWdlbWVudC1hcHAhdDQ3ODY1ODpZN2Q0RDYyM3gxaitXMmJ5MXZNWFJmV0VPVFE9
+
+# grant_type=authorization_code&code=3uxAn3cN77I5i9O9oTX73dAudiYkowpM&redirect_uri=http%3A%2F%2Flocalhost%3A4004%2Fcallback
