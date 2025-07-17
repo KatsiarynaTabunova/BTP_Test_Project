@@ -22,3 +22,10 @@
 # Authorization: Basic c2ItaW5jaWRlbnQtbWFuYWdlbWVudC1hcHAhdDQ3ODY1ODpZN2Q0RDYyM3gxaitXMmJ5MXZNWFJmV0VPVFE9
 
 # grant_type=authorization_code&code=3uxAn3cN77I5i9O9oTX73dAudiYkowpM&redirect_uri=http%3A%2F%2Flocalhost%3A4004%2Fcallback
+
+
+//unit 6 homeWork
+//GET http://localhost:4004/odata/v4/remote/getOrders(Top=1,Skip=2)
+
+//hibrid
+GET http://localhost:4004/odata/v4/remote/getOrders2(Top=1,Skip=2)

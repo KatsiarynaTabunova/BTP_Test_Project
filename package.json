@@ -6,17 +6,24 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^3.26.4",
+    "@sap-cloud-sdk/http-client": "^3.26.4",
+    "@sap-cloud-sdk/resilience": "^3.26.4",
+    "@sap-cloud-sdk/util": "^3.26.4",
     "@sap/cds": "^8",
     "express": "^4"
   },
   "devDependencies": {
+    "@cap-js/cds-test": "^0.4.0",
+    "@cap-js/cds-types": "^0.10.0",
     "@cap-js/sqlite": "^1",
-    "@cap-js/cds-types": "^0.10.0"
+    "jest": "^30.0.4"
   },
   "scripts": {
+    "test": "npx jest tests/test.js",
     "start": "cds-serve",
     "watch-incidents": "cds watch --open incidents/webapp/index.html?sap-ui-xx-viewCache=false",
-    "watch-listofincidents": "cds watch --open listofincidents/webapp/index.html?sap-ui-xx-viewCache=false",   
+    "watch-listofincidents": "cds watch --open listofincidents/webapp/index.html?sap-ui-xx-viewCache=false",
     "watch-items_freesyle": "cds watch --open items_freesyle/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
@@ -37,12 +44,32 @@
             }
           }
         }
+      },
+      "API_BUSINESS_PARTNER": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_BUSINESS_PARTNER"
+      },
+      "Northwind_metadata": {
+        "kind": "odata-v2",
+        "model": "srv/external/Northwind_metadata",
+        "credentials": {
+          "url": "https://services.odata.org/Northwind/Northwind.svc"
+        }
+      },
+      "[hybrid]": {
+        "Northwind_metadata": {
+        "kind": "odata-v2",
+        "model": "srv/external/Northwind_metadata",
+        "credentials": {
+          "destination": "My_Northwind"
+        }
       }
+    }
     }
   },
   "sapux": [
     "app/incidents",
-    "app/listofincidents",    
+    "app/listofincidents",
     "app/items_freesyle"
   ]
 }
